@@ -12,6 +12,12 @@ export class UsuarioEntity {
     @Column()
     apellido: string;
 
+    @Column()
+    username: string;
+
+    @Column()
+    password: string;
+
     @Column({
         nullable: false,
         default: () => 'CURRENT_TIMESTAMP',

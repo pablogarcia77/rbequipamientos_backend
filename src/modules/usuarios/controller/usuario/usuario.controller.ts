@@ -11,8 +11,7 @@ export class UsuarioController {
 
     @Post()
     addUsuario(@Body() usuarioModel: UsuarioModel):any{
-        // return this.usuarioService.saveUsuario(usuarioModel)
-        return usuarioModel
+        return this.usuarioService.saveUsuario(usuarioModel)
     }
 
     @Get()
