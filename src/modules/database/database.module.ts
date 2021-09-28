@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { LogEntity } from '../log/entity/log-entity';
+import { LogsModule } from '../log/log.module';
 import { UsuarioEntity } from '../usuarios/entity/usuario-entity';
 import { UsuarioService } from '../usuarios/service/usuario/usuario.service';
 import { UsuariosModule } from '../usuarios/usuarios.module';
@@ -21,7 +22,8 @@ import { UsuariosModule } from '../usuarios/usuarios.module';
             ],
             synchronize: true,
           }),
-          UsuariosModule
+          UsuariosModule,
+          LogsModule
     ],
     providers: [],
     exports: [DatabaseModule]

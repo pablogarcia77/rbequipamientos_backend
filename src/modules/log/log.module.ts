@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LogEntity } from './entity/log-entity';
-import { LogController } from './controller/log/log.controller';
+import { LogController } from './controller/log.controller';
 import { LogService } from './service/log/log.service';
 
 @Module({
@@ -9,4 +9,4 @@ import { LogService } from './service/log/log.service';
   controllers: [LogController],
   providers: [LogService],
 })
-export class UsuariosModule {}
+export class LogsModule {}
