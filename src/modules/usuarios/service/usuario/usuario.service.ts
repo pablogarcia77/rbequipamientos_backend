@@ -31,4 +31,11 @@ export class UsuarioService {
     async deleteUsuario(id: number){
         return await this.usuarioRP.delete(id)
     }
+
+    async loginUser(usuario: any){
+        let username = usuario.username
+        let password = usuario.password
+        const response = await this.usuarioRP.findOne({ where: { username: username, password: password } })
+        return response ? response : false
+    }
 }

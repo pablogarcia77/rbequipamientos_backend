@@ -28,7 +28,7 @@ export class UsuarioController {
     updateUsuario(@Body() usuarioModel: UsuarioModel, @Param() params):any{
         return this.usuarioService.updateUsuario(params.id,usuarioModel)
     }
-
+    
     @Delete(':id')
     deleteUsuario(@Param() params):any{
         return this.usuarioService.deleteUsuario(params.id)

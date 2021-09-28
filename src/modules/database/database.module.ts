@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
+import { LogEntity } from '../log/entity/log-entity';
 import { UsuarioEntity } from '../usuarios/entity/usuario-entity';
 import { UsuarioService } from '../usuarios/service/usuario/usuario.service';
 import { UsuariosModule } from '../usuarios/usuarios.module';
@@ -15,7 +16,8 @@ import { UsuariosModule } from '../usuarios/usuarios.module';
             password: 'rbequipamientos',
             database: 'rbequipamientos',
             entities: [
-                UsuarioEntity
+                UsuarioEntity,
+                LogEntity
             ],
             synchronize: true,
           }),

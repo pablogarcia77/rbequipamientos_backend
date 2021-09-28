@@ -3,4 +3,6 @@ export interface UsuarioModel {
     nombre: string;
     apellido: string;
     fecha_alta: Date;
+    username: string;
+    password: string;
 }
