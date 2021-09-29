@@ -22,7 +22,9 @@ export class OperacionEntity {
     @ManyToOne(() => BancoEntity, banco => banco.id)
     banco: number;
 
-    @Column()
+    @Column({
+        nullable: true,
+    })
     transaccion: string;
 
     @Column({ 
@@ -31,6 +33,11 @@ export class OperacionEntity {
         scale: 2
     })
     importe: number;
+
+    @Column({
+        nullable: true,
+    })
+    numeroTarjeta: string;
 
     @Column({
         nullable: false,
