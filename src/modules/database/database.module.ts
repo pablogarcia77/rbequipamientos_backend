@@ -13,6 +13,8 @@ import { UsuarioEntity } from '../usuarios/entity/usuario-entity';
 import { UsuariosModule } from '../usuarios/usuarios.module';
 import { BancoEntity } from '../banco/entity/banco';
 import { BancosModule } from '../banco/banco.module';
+import { OperacionEntity } from '../operacion/entity/operacion';
+import { OperacionesModule } from '../operacion/rol.module';
 
 @Module({
     imports: [
@@ -29,7 +31,8 @@ import { BancosModule } from '../banco/banco.module';
                 RolEntity,
                 MovimientoEntity,
                 FormaPagoEntity,
-                BancoEntity
+                BancoEntity,
+                OperacionEntity
             ],
             synchronize: true,
           }),
@@ -38,7 +41,8 @@ import { BancosModule } from '../banco/banco.module';
           RolModule,
           MovimientosModule,
           FormaPagosModule,
-          BancosModule
+          BancosModule,
+          OperacionesModule
     ],
     providers: [],
     exports: [DatabaseModule]

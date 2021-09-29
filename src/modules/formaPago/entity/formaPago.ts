@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity('Forma_Pago')
+@Entity('forma_pago')
 export class FormaPagoEntity {
 
     @PrimaryGeneratedColumn()
