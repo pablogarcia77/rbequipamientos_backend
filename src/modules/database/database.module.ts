@@ -7,6 +7,8 @@ import { MovimientoEntity } from '../movimiento/entity/movimiento';
 import { MovimientosModule } from '../movimiento/movimiento.module';
 import { RolEntity } from '../rol/entity/rol';
 import { RolModule } from '../rol/rol.module';
+import { FormaPagoEntity } from '../formaPago/entity/formaPago';
+import { FormaPagosModule } from '../formaPago/formaPago.module';
 import { UsuarioEntity } from '../usuarios/entity/usuario-entity';
 import { UsuariosModule } from '../usuarios/usuarios.module';
 
@@ -23,14 +25,16 @@ import { UsuariosModule } from '../usuarios/usuarios.module';
                 UsuarioEntity,
                 LogEntity,
                 RolEntity,
-                MovimientoEntity
+                MovimientoEntity,
+                FormaPagoEntity
             ],
             synchronize: true,
           }),
           UsuariosModule,
           LogsModule,
           RolModule,
-          MovimientosModule
+          MovimientosModule,
+          FormaPagosModule
     ],
     providers: [],
     exports: [DatabaseModule]
