@@ -3,8 +3,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { LogEntity } from '../log/entity/log-entity';
 import { LogsModule } from '../log/log.module';
+import { MovimientoEntity } from '../movimiento/entity/movimiento';
+import { MovimientosModule } from '../movimiento/movimiento.module';
+import { RolEntity } from '../rol/entity/rol';
+import { RolModule } from '../rol/rol.module';
 import { UsuarioEntity } from '../usuarios/entity/usuario-entity';
-import { UsuarioService } from '../usuarios/service/usuario/usuario.service';
 import { UsuariosModule } from '../usuarios/usuarios.module';
 
 @Module({
@@ -18,12 +21,16 @@ import { UsuariosModule } from '../usuarios/usuarios.module';
             database: 'rbequipamientos',
             entities: [
                 UsuarioEntity,
-                LogEntity
+                LogEntity,
+                RolEntity,
+                MovimientoEntity
             ],
             synchronize: true,
           }),
           UsuariosModule,
-          LogsModule
+          LogsModule,
+          RolModule,
+          MovimientosModule
     ],
     providers: [],
     exports: [DatabaseModule]

@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { RolEntity } from "src/modules/rol/entity/rol";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('usuario')
 export class UsuarioEntity {
@@ -24,4 +25,7 @@ export class UsuarioEntity {
         type: 'timestamp',
     })
     fecha_alta: Date;
+
+    @ManyToOne(() => RolEntity, rol => rol.id)
+    rol: number
 }

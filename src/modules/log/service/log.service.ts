@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { LogEntity } from '../../entity/log-entity';
+import { LogEntity } from '../entity/log-entity';
 
 @Injectable()
 export class LogService {
